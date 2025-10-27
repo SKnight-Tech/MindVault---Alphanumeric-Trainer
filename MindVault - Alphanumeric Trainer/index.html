@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindVault – Alphanumeric Trainer (Lite – Editable v1.2)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>MindVault – Alphanumeric Trainer (Lite)</h1>
+    <p>Train short‑term memory with numbers, letters, or mixed sequences.</p>
+  </header>
+
+  <section class="controls">
+    <label>Mode:
+      <select id="mode">
+        <option value="numbers">Numbers</option>
+        <option value="letters">Letters</option>
+        <option value="mixed" selected>Mixed</option>
+      </select>
+    </label>
+
+    <label>Length:
+      <input id="length" type="number" min="1" max="150" value="10" />
+    </label>
+
+    <label>Show (seconds):
+      <input id="seconds" type="number" min="1" max="60" value="8" />
+    </label>
+
+    <label class="toggle">
+      <input id="spacedToggle" type="checkbox" />
+      Spaced repetition
+    </label>
+
+    <button id="startBtn">Start</button>
+    <button id="nextBtn">Next (Skip)</button>
+  </section>
+
+  <main>
+    <div class="stage">
+      <div id="info" class="info"></div>
+      <div id="sequence" class="sequence"></div>
+
+      <div class="answer-box">
+        <input id="answerInput" type="text" placeholder="Type what you remember…" disabled />
+        <button id="checkBtn" disabled>Check</button>
+      </div>
+
+      <div id="feedback" class="feedback"></div>
+      <div id="stats" class="stats"></div>
+    </div>
+  </main>
+
+  <footer>
+    <small>Stats are stored locally in your browser. © MindVault Lite</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
